@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+html,body{
+    height: 100%;
+}
+body{
+    position: relative;
+    font-size: 12px;
+    /*line-height: 1.2px;*/
+    background: #fff;
+    fill: #ff5722;
+}
+main{
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+main section{
+    display: none;
+}
+main section:first-child{
+    display: block;
+}
+.item{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.item a{
+    /*display: block;*/
+    display: flex;
+}
+.item .cover,
+.item .cover img{
+    width: 70px;
+}
+.item .detail{
+    flex: 1;
+    padding-left: 10px;
+}
+.item .detail h2{
+    font-size: 16px;
+}
+.item .detail .extra{
+    color: #999;
+    margin-top: 4px;
+}
+.item .detail .score{
+    color: #ff5722;
+}
+
+
+.loading{
+    padding: 5px;
+    text-align: center;
+    display: none;
+}
+.loading .icon{
+    display: inline-block;
+    animation: 0.8s rotate linear infinite;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+footer{
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+footer div{
+    flex: 1;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+footer div.active{
+    fill: #ff5722;
+    color: #ff5722;
+}
+footer span{
+    font-size: 12px;
+    line-height: 1.2px;
+    display: block;
+    padding-top: 9px;
+}
